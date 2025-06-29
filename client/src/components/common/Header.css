@@ -1,0 +1,35 @@
+    .header {
+        margin: 0;
+        padding: 0; /* Ensures enough space inside */
+        width: 100%;
+        position: fixed; /* Keeps the header at the top */
+        top: 0;
+        left: 0;
+        
+    }
+
+    .navbar {
+        margin: 0;
+        padding: 10px 20px; /* Adjusts internal spacing */
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        flex-grow: 1; /* Ensures the menu doesn’t shrink too much */
+    }
+
+    .user-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .user-profile img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover; /* Ensures proper image display */
+    }
+
+    .signout-btn {
+        white-space: nowrap; /* Prevents button text from breaking */
+    }

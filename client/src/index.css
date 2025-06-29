@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", serif; /* Consistent font-family */
+}
+
+:root {
+    --royal-blue: #002349;
+    --blue: #96C2DB;
+    --grey: #E5EDF1;
+    --white: #FFFFFF;
+    --cream: #FFFDF2;
+    --white-smoke: #F0F0F0;
+    --bright-red: #E7473C;
+    --light-background: #f8f9fa; /* Added light background color */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* For subtle shadows */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
+    background-color: #FFE4B5; /* Light orange background */
+    color: var(--royal-blue); /* Text color for uniform readability */
+    line-height: 1.6;
+}
+
+
+.header {
+    margin: 0;  /* Remove extra margins */
+    padding: 0;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #0b44b5, #3787b6); /* Smooth gradient effect */
+    color: var(--white);
+    box-shadow: 0 0px 8px var(--shadow-color); /* Subtle shadow for modern touch */
+}
+
+.header-text-quote {
+    color: var(--cream); /* Adjusted to make text stand out against gradient */
+    font-weight: bold;
+    padding: 10px; /* Add spacing for better readability */
+}
+
+.link {
+    color: var(--royal-blue);
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.link:hover {
+    text-decoration: underline; /* Added hover effect for accessibility */
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--white); /* White background for content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color); /* Subtle shadow */
+    max-width: 900px;
+}
+
+p {
+    margin-bottom: 15px; /* Consistent spacing between paragraphs */
+    color: var(--royal-blue); /* Consistent text color */
+}
+
+img {
+    border-radius: 8px;
+    max-width: 300px; /* Consistent image size */
+    height: auto;
+    box-shadow: 0 2px 4px var(--shadow-color); /* Add a light shadow to images */
+    margin: 10px 0; /* Spacing around images */
+}
+
+h1, h2, h3 {
+    color: var(--royal-blue);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--royal-blue); /* Button background color */
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px var(--shadow-color); /* Subtle shadow for button */
+}
+
+button:hover {
+    background-color: var(--bright-red); /* Red background on hover for attention */
+}
+
+
+.card-light {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional for extra styling */
+  }
+  
+.role-radio .form-check {
+    margin: 0 10px;
+}
+
+.form-check-label {
+    font-size: 18px;
+    color: var(--blue); /* Softer color for labels */
+}
+
+.lead {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}

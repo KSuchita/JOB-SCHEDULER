@@ -1,0 +1,120 @@
+### CLIENT'S HTTP REQUESTS 
+
+### create employer
+POST http://localhost:3000/employer-api/employer
+Content-Type: application/json
+
+{
+  "role": "employer",
+  "firstName": "ef1",
+  "lastName": "el1",
+  "email": "employer@mail.com",
+  "profileImageUrl": "emplimg",
+  "isActive": true,
+  "position":"SDE",
+  "company":"abc"
+}
+
+###create jobseeker
+POST http://localhost:3000/jobseeker-api/jobseeker
+Content-Type: application/json
+
+{
+  "role": "jobseeker",
+  "firstName": "jf1",
+  "lastName": "jl1",
+  "email": "jobseeker@mail.com",
+  "profileImageUrl": "jobimg",
+  "isActive": true,
+  "resumeUrl":"drive"
+}
+###create admin
+POST http://localhost:3000/admin-api/admin
+Content-Type: application/json
+
+{
+  "role": "admin1",
+  "firstName": "abc",
+  "lastName": "xyz",
+  "email": "oaijd@gmail.com",
+  "profileImageUrl": "adminimg",
+  "isActive": true
+}
+
+### fetch jobs by admin
+GET http://localhost:3000/admin-api/jobs
+
+###fetch employer detail
+GET http://localhost:3000/admin-api/employers
+
+
+###fetch jobseeker details
+GET http://localhost:3000/admin-api/jobseekers
+
+
+
+### Read all jobs by jobseeker
+GET http://localhost:3000/jobseeker-api/job
+
+
+### Read all jobs by employer
+GET http://localhost:3000/employer-api/job
+
+### edit job by id
+PUT http://localhost:3000/employer-api/job/1741953576
+Content-Type: application/json
+
+{
+    "_id": "67d41a285ff5576e7e7f660b",
+    "company": "abc",
+    "jobtype": "abc",
+    "domain": "abc",
+    "jobinfo": {
+      "joblevel":"abc",
+      "experience":1,
+      "location":"abc"
+  },
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "dateOfModification":"{{$datetime iso8601}}" 
+   
+}
+
+### delete atricle by article id
+PUT http://localhost:3000/employer-api/jobs/1741953576
+Content-Type: application/json
+
+{
+  "_id":"67d41a285ff5576e7e7f660b",
+  "jobId":"{{$timestamp}}",
+  "company":"abc",
+  "jobtype":"abc",
+  "domain":"abc",
+  "jobinfo":
+  {
+    "joblevel":"abc",
+    "experience":2,
+    "location":"abd"
+  },
+   "dateOfCreation":"{{$datetime iso8601}}",
+   "dateOfModification":"{{$datetime iso8601}}",
+   "isJobActive":false
+}
+
+### create new post###post new job
+POST http://localhost:3000/employer-api/jobs
+Content-Type: application/json
+
+{
+  "jobId": "JOB12345",
+  "company": "ABC Corp",
+  "jobtype": "Full-Time",
+  "domain": "Software Development",
+  "jobinfo": {
+    "joblevel": "Entry Level",
+    "experience": 2,
+    "location": "New York"
+  },
+  "dateOfCreation": "2025-03-26",
+  "dateOfModification": "2025-03-26",
+  "isJobActive": true
+}
